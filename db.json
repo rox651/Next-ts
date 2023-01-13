@@ -1,0 +1,14 @@
+{
+   "users": [
+      { "id": 1, "username": "rox444", "email": "homero@300bees.com", "password": "1234h" },
+      { "id": 2, "username": "juan2", "email": "homerojose69@gmail.com", "password": "1234" }
+   ],
+   "todos": [
+      {
+         "id": "tarea-1",
+         "userId": 1,
+         "username": "rox444",
+         "password": "1234h"
+      }
+   ]
+}
