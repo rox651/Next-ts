@@ -1,17 +1,18 @@
 export interface AuthProps {
-   userCredentials: UserCredentials;
+  userCredentials: UserCredentials 
+  updateUser: (value: Omit<UserCredentials, "username">) => void
 }
 
 export interface UserCredentials {
-   userId?: number | string;
-   username: string;
-   password: string;
-   email: string;
-   isUserActive?: boolean;
+  id?: number | string
+  username: string
+  password: string
+  email: string
+  isUserActive?: boolean
 }
 
-export interface Inputs {
-   username: string;
-   password: string;
-   email: string;
+export interface InputsAuth {
+  username: string
+  password: string
+  email: string
 }
