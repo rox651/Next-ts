@@ -1,11 +1,18 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 function MyApp({ Component, pageProps }: AppProps) {
+   const queryClient = new QueryClient();
+
    return (
-      <main className="grid place-items-center place-content-center gap-4 min-h-screen">
-         <Component {...pageProps} />
-      </main>
+      <QueryClientProvider client={queryClient}>
+         <main className="grid min-h-screen place-content-center place-items-center gap-4">
+            <Component {...pageProps} />
+         </main>
+         <ReactQueryDevtools />
+      </QueryClientProvider>
    );
 }
 
